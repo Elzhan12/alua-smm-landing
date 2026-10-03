@@ -48,4 +48,73 @@
             });
         });
     }
+
+    // Stagger reveal for card grids
+    const staggerGroups = document.querySelectorAll(".stagger");
+    if (staggerGroups.length > 0 && "IntersectionObserver" in window) {
+        const staggerObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("in");
+                        staggerObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.08, rootMargin: "0px 0px -30px 0px" }
+        );
+
+        staggerGroups.forEach((el) => staggerObserver.observe(el));
+    } else {
+        staggerGroups.forEach((el) => el.classList.add("in"));
+    }
+
+    // Count-up numbers
+    const counters = document.querySelectorAll("[data-count]");
+    const animateCounter = (el) => {
+        const target = parseFloat(el.dataset.count);
+        const suffix = el.dataset.suffix || "";
+        const duration = 1400;
+        const start = performance.now();
+
+        const tick = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(target * eased) + suffix;
+            if (progress < 1) requestAnimationFrame(tick);
+        };
+
+        requestAnimationFrame(tick);
+    };
+
+    if (counters.length > 0 && "IntersectionObserver" in window) {
+        const counterObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        counters.forEach((el) => counterObserver.observe(el));
+    }
+
+    // Soft parallax on background blobs
+    const blobs = document.querySelectorAll(".bg-blob");
+    if (blobs.length > 0 && window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+        window.addEventListener(
+            "scroll",
+            () => {
+                const offset = window.scrollY * 0.06;
+                blobs.forEach((blob, i) => {
+                    blob.style.marginTop = offset * (i + 1) * 0.5 + "px";
+                });
+            },
+            { passive: true }
+        );
+    }
 });

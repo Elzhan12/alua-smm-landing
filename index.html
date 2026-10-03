@@ -32,25 +32,86 @@
         </div>
     </header>
 
-    <main id="main" class="hero reveal">
-        <div class="container">
-            <div class="hero-content">
-                <span class="hero-tag">Алуа • 20 лет • Студентка Информатики • Опыт ~3 года</span>
-                <h1 class="hero-title">Нежный SMM, который цепляет и продаёт</h1>
-                <p class="hero-subtitle">Создаю нежный, эстетичный контент для Instagram — с душой, под вайб бренда и с акцентом на результат</p>
-                <a href="#contact" class="hero-btn">Рассчитать стоимость</a>
+    <main id="main" class="hero-wrap reveal">
+        <div class="hero-deco" aria-hidden="true">
+            <div class="fchip fchip--1"><span>💌 Контент с душой</span></div>
+            <div class="fchip fchip--2"><span><b>80%</b> практики</span></div>
+            <div class="fchip fchip--3"><span>🎯 рост продаж</span></div>
+        </div>
+
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-tag">Алуа • 20 лет • Студентка Информатики • Опыт ~3 года</span>
+                    <span class="kicker">SMM-специалист</span>
+                    <h1 class="hero-title">
+                        <span class="title-wrap">Нежный SMM, который цепляет и продаёт
+                            <svg class="spark" width="46" height="40" viewBox="0 0 46 40" fill="none" aria-hidden="true" style="right:-56px;top:-12px">
+                                <path d="M8 26L3 37"/><path d="M22 18L17 4"/><path d="M34 26l9-8"/>
+                            </svg>
+                        </span>
+                    </h1>
+                    <p class="hero-subtitle">Создаю нежный, эстетичный контент для Instagram — с душой, под вайб бренда и с акцентом на результат</p>
+                    <a href="#contact" class="hero-btn">Рассчитать стоимость<span class="btn-arrow">→</span></a>
+
+                    <div class="chips">
+                        <span class="chip">Опыт <b>~3 года</b></span>
+                        <span class="chip">Студентка <b>Информатики</b></span>
+                        <span class="chip">Формат: <b>удалённо</b></span>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat__v" data-count="3" data-suffix="+">3+</span>
+                            <span class="stat__k">года в SMM</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__v" data-count="30" data-suffix="+">30+</span>
+                            <span class="stat__k">проектов в портфолио</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__v" data-count="100" data-suffix="%">100%</span>
+                            <span class="stat__k">на связи с клиентами</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+
+    <div class="strip" aria-hidden="true">
+        <div class="strip__row">
+            <span>Ведение соцсетей</span>
+            <span>Таргетированная реклама</span>
+            <span>Оформление профиля</span>
+            <span>Контент-план</span>
+            <span>Сторителлинг</span>
+            <span>Аналитика</span>
+            <span>Работа с блогерами</span>
+            <span>Ведение соцсетей</span>
+            <span>Таргетированная реклама</span>
+            <span>Оформление профиля</span>
+            <span>Контент-план</span>
+            <span>Сторителлинг</span>
+            <span>Аналитика</span>
+            <span>Работа с блогерами</span>
+        </div>
+    </div>
 
     <section id="about" class="about reveal">
         <div class="container">
             <div class="about-grid">
                 <div class="about-text">
-                    <h2 class="section-title left">Обо мне</h2>
+                    <h2 class="section-title left"><span class="kicker">Обо мне</span>Немного обо мне</h2>
                     <p>Меня зовут Алуа. Мне 20 лет, я учусь в университете по направлению «Информатика».</p>
                     <p>Уже почти 3 года занимаюсь SMM — с любовью к нежной эстетике, деталям и грамотной структуре.</p>
                     <p>Сочетаю системный подход и тёплый вайб, чтобы аккаунт красиво смотрелся и эффективно работал на бизнес.</p>
+
+                    <div class="chips" style="justify-content: flex-start">
+                        <span class="chip">Целевая аудитория</span>
+                        <span class="chip">Контент-маркетинг</span>
+                        <span class="chip">Таргет</span>
+                    </div>
                 </div>
                 <div class="about-card">
                     <div class="about-avatar">А</div>
@@ -66,27 +127,31 @@
 
     <section id="services" class="services reveal">
         <div class="container">
-            <h2 class="section-title">Услуги</h2>
-            <div class="services-grid">
+            <h2 class="section-title"><span class="kicker">Услуги</span>Что я делаю</h2>
+            <div class="services-grid stagger">
                 <article class="service-card">
+                    <span class="ghost-num" aria-hidden="true">01</span>
                     <div class="service-icon">💌</div>
                     <h3>Ведение соцсетей</h3>
                     <p>Мягкий стиль, продуманный контент-план, посты, сторис и вовлечение аудитории</p>
                     <div class="service-price">от X ₽/мес</div>
                 </article>
                 <article class="service-card">
+                    <span class="ghost-num" aria-hidden="true">02</span>
                     <div class="service-icon">💕</div>
                     <h3>Таргетированная реклама</h3>
                     <p>Тёплая реклама для вашей ЦА с аккуратным тестированием и оптимизацией</p>
                     <div class="service-price">от X ₽/мес</div>
                 </article>
                 <article class="service-card">
+                    <span class="ghost-num" aria-hidden="true">03</span>
                     <div class="service-icon">🌸</div>
                     <h3>Оформление профиля</h3>
                     <p>Нежный, гармоничный визуал — аватар, шапка, хайлайтс для приятного первого впечатления</p>
                     <div class="service-price">от X ₽/разово</div>
                 </article>
                 <article class="service-card">
+                    <span class="ghost-num" aria-hidden="true">04</span>
                     <div class="service-icon">✨</div>
                     <h3>Контент-план</h3>
                     <p>Готовый план с идеями и текстами в розово-нежном стиле под ваш бренд</p>
@@ -98,20 +163,23 @@
 
     <section id="cases" class="cases reveal">
         <div class="container">
-            <h2 class="section-title">Кейсы</h2>
+            <h2 class="section-title"><span class="kicker">Кейсы</span>Результаты клиентов</h2>
             <p class="cases-note">Скоро здесь появятся реальные кейсы с результатами работы</p>
-            <div class="cases-grid">
+            <div class="cases-grid stagger">
                 <article class="case-card">
+                    <span class="ghost-num" aria-hidden="true">01</span>
                     <div class="case-placeholder">Кейс 1</div>
                     <h3>Название проекта</h3>
                     <p>Краткое описание результата</p>
                 </article>
                 <article class="case-card">
+                    <span class="ghost-num" aria-hidden="true">02</span>
                     <div class="case-placeholder">Кейс 2</div>
                     <h3>Название проекта</h3>
                     <p>Краткое описание результата</p>
                 </article>
                 <article class="case-card">
+                    <span class="ghost-num" aria-hidden="true">03</span>
                     <div class="case-placeholder">Кейс 3</div>
                     <h3>Название проекта</h3>
                     <p>Краткое описание результата</p>
@@ -122,23 +190,23 @@
 
     <section id="hobbies" class="hobbies reveal">
         <div class="container">
-            <h2 class="section-title">Мои увлечения</h2>
-            <div class="hobbies-grid">
-                <article class="hobby-card"><div class="hobby-icon">📸</div><h3>Контент-съёмка</h3><p>Люблю ловить атмосферу в кадре</p></article>
-                <article class="hobby-card"><div class="hobby-icon">🎨</div><h3>Эстетика и дизайн</h3><p>Ценю нежные палитры и детали</p></article>
-                <article class="hobby-card"><div class="hobby-icon">🎶</div><h3>Музыка</h3><p>Всегда с плейлистом под вайб</p></article>
-                <article class="hobby-card"><div class="hobby-icon">☕</div><h3>Уютные вечера</h3><p>Заряжают идеями для тёплого контента</p></article>
+            <h2 class="section-title"><span class="kicker">Увлечения</span>Мои увлечения</h2>
+            <div class="hobbies-grid stagger">
+                <article class="hobby-card"><span class="ghost-num" aria-hidden="true">01</span><div class="hobby-icon">📸</div><h3>Контент-съёмка</h3><p>Люблю ловить атмосферу в кадре</p></article>
+                <article class="hobby-card"><span class="ghost-num" aria-hidden="true">02</span><div class="hobby-icon">🎨</div><h3>Эстетика и дизайн</h3><p>Ценю нежные палитры и детали</p></article>
+                <article class="hobby-card"><span class="ghost-num" aria-hidden="true">03</span><div class="hobby-icon">🎶</div><h3>Музыка</h3><p>Всегда с плейлистом под вайб</p></article>
+                <article class="hobby-card"><span class="ghost-num" aria-hidden="true">04</span><div class="hobby-icon">☕</div><h3>Уютные вечера</h3><p>Заряжают идеями для тёплого контента</p></article>
             </div>
         </div>
     </section>
     <section id="contact" class="contact reveal">
         <div class="container">
-            <h2 class="section-title">Связаться со мной</h2>
+            <h2 class="section-title"><span class="kicker">Контакты</span>Связаться со мной</h2>
             <div class="contact-content">
                 <p>Хочешь нежный и эффективный SMM? Пиши — обсудим твой проект ♥</p>
                 <div class="contact-links">
-                    <a href="https://t.me/username" target="_blank" rel="noopener" class="contact-btn">Telegram</a>
-                    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" class="contact-btn">Instagram</a>
+                    <a href="https://t.me/username" target="_blank" rel="noopener" class="contact-btn">Telegram<span class="btn-arrow">→</span></a>
+                    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" class="contact-btn">Instagram<span class="btn-arrow">→</span></a>
                 </div>
                 <p class="contact-note">*Ссылки можно заменить на реальные</p>
             </div>
